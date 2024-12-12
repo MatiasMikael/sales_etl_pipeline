@@ -6,7 +6,7 @@ spark = SparkSession.builder.appName("Smartphone Sales Analysis").getOrCreate()
 
 # Step 2: Read the cleaned CSV file
 print("Step 2: Reading the cleaned CSV file into Spark DataFrame...")
-file_path = "C:/users/matias/desktop/sales_data_project/2_data/cleaned_smartphone_sales.csv"
+file_path = "C:/users/matias/desktop/sales_etl_pipeline/2_data/cleaned_smartphone_sales.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 # Step 3: Perform analysis

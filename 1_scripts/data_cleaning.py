@@ -2,7 +2,7 @@ import pandas as pd
 
 # Step 1: Read the dataset
 print("Step 1: Reading the dataset...")
-file_path = "C:/users/matias/desktop/sales_data_project/2_data/smartphone_sales.csv"
+file_path = "C:/users/matias/desktop/sales_etl_pipeline/2_data/smartphone_sales.csv"
 data = pd.read_csv(file_path)
 
 # Step 2: Drop unnecessary columns
@@ -22,6 +22,6 @@ data = data.drop_duplicates()
 
 # Step 5: Save cleaned data
 print("Step 5: Saving cleaned data...")
-data.to_csv("C:/users/matias/desktop/sales_data_project/2_data/cleaned_smartphone_sales.csv", index=False)
+data.to_csv("C:/users/matias/desktop/sales_etl_pipeline/2_data/cleaned_smartphone_sales.csv", index=False)
 
 print("Data cleaning process completed.")

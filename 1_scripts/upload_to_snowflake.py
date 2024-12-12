@@ -56,7 +56,7 @@ def copy_csv_to_snowflake(file_path, table_name, connection_params):
         conn.close()
 
 if __name__ == "__main__":
-    file_path = "C:/users/matias/desktop/sales_data_project/2_data/cleaned_smartphone_sales.csv"
+    file_path = "C:/users/matias/desktop/sales_etl_pipeline/2_data/cleaned_smartphone_sales.csv"
     table_name = "SMARTPHONE_SALES"
 
     print("Starting COPY INTO process...")

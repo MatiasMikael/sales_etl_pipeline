@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Step 1: Load the cleaned CSV file
-file_path = "C:/users/matias/desktop/sales_data_project/2_data/cleaned_smartphone_sales.csv"
+file_path = "C:/users/matias/desktop/sales_etl_pipeline/2_data/cleaned_smartphone_sales.csv"
 data = pd.read_csv(file_path)
 
 # Step 2: Calculate the average discount percentage

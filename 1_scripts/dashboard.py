@@ -5,9 +5,9 @@ import plotly.express as px
 # Step 1: Load datasets
 print("Step 1: Loading datasets...")
 # Load datasets
-average_discount_by_brand = pd.read_csv("C:/users/matias/desktop/sales_data_project/3_sql_queries/average_discount_by_brand.csv")
-top_selling_brands = pd.read_csv("C:/users/matias/desktop/sales_data_project/3_sql_queries/top_5_selling_brands.csv")
-top_colors_by_sales = pd.read_csv("C:/users/matias/desktop/sales_data_project/3_sql_queries/top_10_colors_by_sales.csv")
+average_discount_by_brand = pd.read_csv("C:/users/matias/desktop/sales_etl_pipeline/3_sql_queries/average_discount_by_brand.csv")
+top_selling_brands = pd.read_csv("C:/users/matias/desktop/sales_etl_pipeline/3_sql_queries/top_5_selling_brands.csv")
+top_colors_by_sales = pd.read_csv("C:/users/matias/desktop/sales_etl_pipeline/3_sql_queries/top_10_colors_by_sales.csv")
 print("Datasets loaded successfully.")
 
 # Step 2: Create Dash app
@@ -43,7 +43,19 @@ fig3 = px.bar(
     y="TOTAL_SALES",
     title="Top 10 Colors by Sales",
     labels={"TOTAL_SALES": "Total Sales", "COLORS": "Colors"},
-    color="COLORS"
+    color="COLORS",
+    color_discrete_map={
+        "Black": "black",
+        "Gold": "gold",
+        "White": "white",
+        "Blue": "blue",
+        "Silver": "silver",
+        "Red": "red",
+        "Grey": "grey",
+        "Space Grey": "darkgrey",
+        "Midnight Black": "midnightblue",
+        "Rose Gold": "pink"
+    }
 )
 
 # Step 6: Set up the app layout
